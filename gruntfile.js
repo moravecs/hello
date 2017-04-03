@@ -47,6 +47,15 @@ cssmin: {
       ext: '.min.css'
     }]
   },
+  options: {
+    shorthandCompacting: false,
+    roundingPrecision: -1
+  },
+//  combine: {
+//    files: {
+//      'src/css/tidy.min.css': ['!src/css/*.min.css', 'src/css/*.css']
+//    }
+//  }
 },
 uglify: {
   build: {
@@ -56,6 +65,18 @@ uglify: {
     files: {
       'dist/js/application.js': [ 'src/**/*.js' ]
     },
+  },
+},
+concat: {
+  options: {
+    // define a string to put between each file in the concatenated output
+    separator: ';'
+  },
+  dist: {
+    // the files to concatenate
+    src: ['src/**/*.js'],
+    // the location of the resulting JS file
+    dest: 'dist/application.js'
   },
 },
 
@@ -93,7 +114,7 @@ uncss: {
          ignoreSheets: [/fonts.googleapis/],
       },
       files: {
-         'dist/css/tidy.css': ['src/index.php']
+         'src/css/tidy.css': ['src/index.php']
       }
    }
 },
@@ -118,7 +139,7 @@ processhtml: {
 grunt.registerTask(
   'default',
   'Vigila los cambios en el proyecto y automáticamente copia los archivos y lanza el servidor de prueba.',
-  [ 'clean', 'imagemin', 'uglify', 'cssmin', 'uncss', 'processhtml', 'connect', 'watch' ]
+  [ 'clean', 'imagemin', 'uglify', 'uncss', 'cssmin', 'concat','processhtml', 'connect', 'watch' ]
 );
 
 grunt.registerTask(
@@ -133,10 +154,10 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-contrib-connect');
 grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-coffee');
+grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-uncss');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
-
+grunt.loadNpmTasks('grunt-browser-sync');
   // define los comandos para las tareas
 };
