@@ -21,6 +21,20 @@
 <link rel="apple-touch-icon" sizes="114x114" href="img/touch-icon-114x114.png" />
 <link rel="apple-touch-icon" sizes="144x144" href="img/touch-icon-144x144.png" />
 <script type="text/javascript">document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
+<!-- build:css inline css/tidy.min.css -->
+<link href ="css/bootstrap.css" rel="stylesheet" media="screen" />
+<link href ="css/style.css" rel="stylesheet" media="screen" />
+<link href ="css/animate.min.css" rel="stylesheet" media="screen" />
+<link href ="css/flexslider.css" rel="stylesheet" media="screen" />
+<link href ="css/responsive.css" rel="stylesheet" media="screen" />
+<link href ="css/font-awesome.css" rel="stylesheet" media="screen" />
+<link  href ="css/rrssb.css" rel="stylesheet" media="screen" />
+<!-- /build -->
+<!-- build:css inline css/fancySelect.min.css -->
+<link href ="css/fancySelect.css" rel="stylesheet" media="screen" />
+<!-- /build -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet' type='text/css' />
 </head>
 <body>
 <header id="header">
@@ -35,8 +49,8 @@
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-<span class="navbar-brand logo text-success">
-<span class="fa fa-thumbs-o-up " style="color:#3c763d;"></span>Graduado en ESO
+<span class="navbar-brand logo text-success colorlogo">
+<span class="fa fa-thumbs-o-up "></span>Graduado en ESO
 </span>
 </div>
 </nav>
@@ -68,62 +82,6 @@
 </header>
 <div class="content">
 <div class="container box">
-<section id="features" class="row">
-<div class="col-md-3 col-xs-6">
-<div class="event-info">
-<div class="icon fa fa-thumbs-o-up"></div>
-<div class="info">
-<h3>Formación de calidad</h3>
-<span>Avalada por grandes centros y con titulación oficial</span>
-</div>
-</div>
-</div>
-<div class="col-md-3 col-xs-6">
-<div class="event-info">
-<div class="icon fa fa-file-text-o"></div>
-<div class="info">
-<h3>Material Personalizado</h3>
-<span>Material de estudio actualizado para obtener tu título facilmente</span>
-</div>
-</div>
-</div>
-<div class="col-md-3 col-xs-6">
-<div class="event-info">
-<div class="icon fa fa-laptop"></div>
-<div class="info">
-<h3>Cursos Online</h3>
-<span>Ajustados a tu ritmo y tus necesidades, adaptados a tu nivel y conocimientos</span>
-</div>
-</div>
-</div>
-<div class="col-md-3 col-xs-6">
-<div class="event-info">
-<div class="icon fa fa-users"></div>
-<div class="info">
-<h3>Tutores Personales</h3>
-<span>Tendrás la asistencia de un equipo docente para que consigas tu objetivo</span>
-</div>
-</div>
-</div>
-</section>
-<section id="schedule" class="row">
-<div class="col-md-7 col-sm-12">
-<div class="fondogris">
-<h3>¿Qué necesitas para obtener el Graduado de la ESO?</h3>
-<ul>
-<li>Tener 18 años o más el día en que recibas el título</li>
-<li>No estar estudiando ninguna enseñanza obligatoria en otro centro tanto presencial como a distancia</li>
-</ul>
-<p>Miles de alumnos lo han coseguido ya. Con el título oficial se te abren un montón de puertas, tanto en el mundo laboral como en el mundo educativo. Podrás trabajar o seguir estudiando, tu eliges</p>
-
-</div>
-</div>
-<div class="col-md-5 col-sm-12">
-<h2>Te ayudamos a mejorar</h2>
-<p>Si te cuesta encontrar trabajo por falta de estudios, debes mejorar tus estudios y tu currículum. El Graduado Escolar es el título imprescindible para superar cualquier entrevista de trabajo.</p>
-<p>Si quieres estudiar un Grado Medio de FP o acceder a la universidad, necesitas tener la <abbr title="Enseñanza Secundaria Obligatoria">ESO</abbr> para hacerlo. ¿A qué esperas?</p>
-</div>
-</section>
 <section id="empresas" class="row">
 <div class="col-sm-12">
 <div class="section-header text-left">
@@ -137,7 +95,7 @@
 <p>Podrás matricularte sólo en lo quer realmente necesitas y así completar tus estudios. Contarás con el apoyo de profesores que coordinarán tus progresos y corregirán tus exámenes para que obtengas tu titulación.</p>
 </div>
 <div class="col-md-7 col-sm-12">
-<div class="form" style="background:#FFF5C7;">
+<div class="form cupon" >
 <form name="cupon" id="cupon" action="envio.php" method="post">
 <input type="hidden" name="curso" id="curso" value="Graduado ESO" />
 <input type="hidden" name="centro" id="centro" value="24" />
@@ -196,6 +154,62 @@ aviso legal</a> y acepto</label>
 </div>
 </form>
 </div>
+</div>
+</section>
+<section id="features" class="row">
+<div class="col-md-3 col-xs-6">
+<div class="event-info">
+<div class="icon fa fa-thumbs-o-up"></div>
+<div class="info">
+<h3>Formación de calidad</h3>
+<span>Avalada por grandes centros y con titulación oficial</span>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-xs-6">
+<div class="event-info">
+<div class="icon fa fa-file-text-o"></div>
+<div class="info">
+<h3>Material Personalizado</h3>
+<span>Material de estudio actualizado para obtener tu título facilmente</span>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-xs-6">
+<div class="event-info">
+<div class="icon fa fa-laptop"></div>
+<div class="info">
+<h3>Cursos Online</h3>
+<span>Ajustados a tu ritmo y tus necesidades, adaptados a tu nivel y conocimientos</span>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-xs-6">
+<div class="event-info">
+<div class="icon fa fa-users"></div>
+<div class="info">
+<h3>Tutores Personales</h3>
+<span>Tendrás la asistencia de un equipo docente para que consigas tu objetivo</span>
+</div>
+</div>
+</div>
+</section>
+<section id="schedule" class="row">
+<div class="col-md-7 col-sm-12">
+<div class="fondogris">
+<h3>¿Qué necesitas para obtener el Graduado de la ESO?</h3>
+<ul>
+<li>Tener 18 años o más el día en que recibas el título</li>
+<li>No estar estudiando ninguna enseñanza obligatoria en otro centro tanto presencial como a distancia</li>
+</ul>
+<p>Miles de alumnos lo han coseguido ya. Con el título oficial se te abren un montón de puertas, tanto en el mundo laboral como en el mundo educativo. Podrás trabajar o seguir estudiando, tu eliges</p>
+
+</div>
+</div>
+<div class="col-md-5 col-sm-12">
+<h2>Te ayudamos a mejorar</h2>
+<p>Si te cuesta encontrar trabajo por falta de estudios, debes mejorar tus estudios y tu currículum. El Graduado Escolar es el título imprescindible para superar cualquier entrevista de trabajo.</p>
+<p>Si quieres estudiar un Grado Medio de FP o acceder a la universidad, necesitas tener la <abbr title="Enseñanza Secundaria Obligatoria">ESO</abbr> para hacerlo. ¿A qué esperas?</p>
 </div>
 </section>
 <section id="faq" class="row separated">
@@ -304,7 +318,7 @@ Una vez finalizado el cursos, obtendrás la Titulación Oficial de Graduado en E
 El curso está dividido en dos grandes ciclos que corresponde al 1º y 2º de ESO y 3º y 4º de ESO respectivamente.<br /><br />
 Cada ciclo está dividido en tres ámbitos distintos: Comunicación (Lengua Castellana, Literatura – Inglés), Social (Geografía, Historia y Ciencias Sociales) y científico técnico (Matemáticas, Ciencias Naturales-Tecnología)<br />
 <br />
-Apúntate a <a href="#register">nuestro newsletter</a> y síguenos en nuestra <a href="http://www.facebook.com/graduado.eso" target="_blank">página de facebook</a> y nuestra página de <a href="http://plus.google.com/112295957880589346302" rel="publisher" style="text-decoration:none;" target="_blank">
+Síguenos en nuestra <a href="http://www.facebook.com/graduado.eso" target="_blank">página de facebook</a> y nuestra página de <a href="http://plus.google.com/112295957880589346302" rel="publisher" target="_blank">
 Google+</a>. Serás el primero en enterarte.
 </div>
 </li>
@@ -446,29 +460,19 @@ c-0.002,2.073-1.736,3.665-4.982,3.649L10.302,25.609z"/>
 				</div>
 			</div>
 		</footer>
-<!-- build:css inline css/tidy.min.css -->
-<link href ="css/bootstrap.css" rel="stylesheet" media="screen" />
-<link href ="css/style.css" rel="stylesheet" media="screen" />
-<link href ="css/animate.min.css" rel="stylesheet" media="screen" />
-<link href ="css/flexslider.css" rel="stylesheet" media="screen" />
-<link href ="css/responsive.css" rel="stylesheet" media="screen" />
-<link  href ="css/rrssb.css" rel="stylesheet" media="screen" />
-<!-- /build -->
-<link href ="css/fancySelect.css" rel="stylesheet" media="screen" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
-<link href='http://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet' type='text/css' />
+
 		<!--== Javascript Files ==-->
 <script src="http://www.graduadoenesoadistancia.com/js/optimizadas/jquery-2.1.0.min.js"></script>
 <script src="http://www.graduadoenesoadistancia.com/js/optimizadas/bootstrap.min.js"></script>
-<script src="http://www.graduadoenesoadistancia.com/js/optimizadas/jquery.scrollTo.js"></script>
-<script src="http://www.graduadoenesoadistancia.com/js/optimizadas/jquery.nav.js"></script>
 <script src="http://www.graduadoenesoadistancia.com/js/optimizadas/jquery.flexslider.js"></script>
-<script src="http://www.graduadoenesoadistancia.com/js/optimizadas/jquery.accordion.js"></script>
-<script src="http://www.graduadoenesoadistancia.com/js/optimizadas/jquery.placeholder.js"></script>
 <script src="http://www.graduadoenesoadistancia.com/js/optimizadas/fancySelect.js"></script>
+<!-- build:js  js/application.js -->
+<script src="js/jquery.accordion.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/rrssb.min.js"></script>
 <script src="js/main.js"></script>
-<script src="http://www.graduadoenesoadistancia.com/js/optimizadas/rrssb.min.js"></script>
-<script type="text/javascript" src="http://www.graduadoenesoadistancia.com/js/funcions_cupon_laboral.js"></script>
+<script src="js/funcions_cupon_laboral.js"></script>
+<!-- /build -->
 
 
 </body>
